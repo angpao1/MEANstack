@@ -1,5 +1,12 @@
 <h1>MEAN Stack</h1>
 
+<form action="">
+  <label for="name">Name</label>
+  <input type="text" [(ngModel)]="name" name="name">
+</form>
+
+<button (click)="onAdd()">Add</button>
+
 <ul>
-  <li *ngFor='let item of result'>{{item.name}}</li>
+  <li *ngFor='let item of result'>{{item.name}}  <button (click)="onDelete(item.name)">X</button></li>
 </ul>
